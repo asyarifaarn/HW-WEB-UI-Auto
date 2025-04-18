@@ -1,4 +1,4 @@
-const { Builder, By, untill } = require('selenium-webdriver');
+const { Builder, By, until } = require('selenium-webdriver');
 const assert = require('assert');
 const chrome = require('selenium-webdriver/chrome');
 
@@ -26,7 +26,7 @@ describe('Google Search Test', function () {
         await buttonCart.isDisplayed()
 
         let textAppLogo = await driver.findElement(By.className('app_logo'))
-        let logotext = await textAppLogo.get Text()
+        let logotext = await textAppLogo.getText();
         assert.strictEqual(logotext, 'Swag Labs')
 
         await driver.sleep(3000);
